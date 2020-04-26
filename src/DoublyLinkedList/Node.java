@@ -1,4 +1,4 @@
-package main;
+package DoublyLinkedList;
 
 public class Node<T> {
     T data;
