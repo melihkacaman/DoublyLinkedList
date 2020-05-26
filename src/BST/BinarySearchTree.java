@@ -169,4 +169,19 @@ public class BinarySearchTree<T extends Comparable<T>> {
         else
             return findMaxRecursive(node.rightChild);
     }
+
+
+    // the last example
+    int height(){
+        return height(root);
+    }
+
+    private int height(Node<T> node){
+        if (node == null) {
+            return -1;
+        }
+        else {
+            return +1 + Math.max(height(node.leftChild), height(node.rightChild));
+        }
+    }
 }

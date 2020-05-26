@@ -2,6 +2,7 @@ package graphs;
 
 
 import java.util.LinkedList;
+import java.util.Objects;
 
 class Vertex<T> {
     boolean visited;
@@ -20,5 +21,10 @@ class Vertex<T> {
 
     LinkedList<Vertex<T>> getNeighbours() {
         return neighbours;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return this.data == ((Vertex)o).data;
     }
 }
